@@ -1,0 +1,6 @@
+Converts sweep-based recordings in the CED cfs file format into MATLAB format mat files. Input files are assumed to be uint16s with offset and multiply with frames of equal length and equal sampling frequencies. Output files contain one matrix of doubles per channel, with rows corresponding to sweeps and columns corresponding to sample points. It assumes sampling frequency and units are known as this information is not present in the mat file.
+
+Will only compile properly on intel due to requiring little endianness.
+
+build with
+gcc -std=c99 main.c -o cfs2mat
